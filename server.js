@@ -7,7 +7,7 @@ const server = net.createServer((connection) => {
     console.log(data.toString());
     for (var i = 0; i < connects.length; i++) {
       if (connects[i] !== connection) {
-        connects[i].write(`User ${connects.indexOf(connection) + 1}: ${data.toString()}`);
+        connects[i].write(`\nUser ${connects.indexOf(connection) + 1}: ${data.toString()}`);
       }
   }
   });
